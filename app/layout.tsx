@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const bootlegSans = localFont({
@@ -41,7 +43,9 @@ export default function RootLayout({
       className={`${bootlegSans.variable} ${seriousSansBold.variable} ${seriousSans.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-cream text-charcoal font-body antialiased">
+        <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
