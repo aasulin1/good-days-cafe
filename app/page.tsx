@@ -1,4 +1,5 @@
 import Link from "next/link";
+import InstagramFeed from "@/components/InstagramFeed";
 
 const TOAST_ORDER_URL =
   "https://order.toasttab.com/online/good-days-cafe-941-n-virginia-street";
@@ -177,6 +178,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── Instagram feed ── */}
+      <InstagramFeed />
 
     </main>
   );

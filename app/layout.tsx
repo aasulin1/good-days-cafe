@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Nav from "@/components/Nav";
-import InstagramFeed from "@/components/InstagramFeed";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
@@ -46,7 +45,6 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-cream text-charcoal font-body antialiased">
         <Nav />
         {children}
-        <InstagramFeed />
         <Footer />
       </body>
     </html>
