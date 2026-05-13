@@ -11,3 +11,7 @@
   --font-heading: var(--font-serious-sans-bold);
   --font-body: var(--font-serious-sans);
 }
+
+.font-heading {
+  text-transform: uppercase;
+}

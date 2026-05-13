@@ -16,7 +16,7 @@ const HOURS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal text-cream mt-auto">
+    <footer className="bg-olive text-cream mt-auto">
       <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
 
         {/* Brand */}
@@ -100,16 +100,6 @@ export default function Footer() {
           <div className="klaviyo-form-placeholder h-20 rounded border border-cream/10 flex items-center justify-center">
             <span className="font-body text-xs text-cream/30">Klaviyo signup — coming soon</span>
           </div>
-        </div>
-      </div>
-
-      {/* Live IG feed grid placeholder */}
-      <div className="border-t border-cream/10 py-6 px-6 max-w-7xl mx-auto">
-        <p className="font-heading text-xs uppercase tracking-wider text-cream/30 mb-4">Latest from Instagram</p>
-        <div className="grid grid-cols-6 gap-1">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="aspect-square bg-cream/5 rounded" />
-          ))}
         </div>
       </div>
 

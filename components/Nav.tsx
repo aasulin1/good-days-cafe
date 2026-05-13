@@ -27,11 +27,6 @@ export default function Nav() {
     <header className="w-full bg-cream border-b border-charcoal/10">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between gap-6">
 
-        {/* Logo */}
-        <Link href="/" className="font-display text-xl text-olive shrink-0">
-          Good Days Cafe
-        </Link>
-
         {/* Desktop nav links */}
         <nav className="hidden lg:flex items-center gap-6" aria-label="Main navigation">
           {NAV_LINKS.map(({ label, href, external }) =>
@@ -59,8 +54,13 @@ export default function Nav() {
           )}
         </nav>
 
-        {/* Desktop — Gift Cards + Rewards */}
-        <div className="hidden lg:flex items-center gap-3 shrink-0">
+        {/* Mobile — logo (left on mobile) */}
+        <Link href="/" className="lg:hidden font-display text-2xl text-olive">
+          Good Days Cafe
+        </Link>
+
+        {/* Desktop right — Gift Cards + Rewards + Logo */}
+        <div className="hidden lg:flex items-center gap-4 shrink-0">
           <a
             href={TOAST_GIFT_CARDS_URL}
             target="_blank"
@@ -77,6 +77,9 @@ export default function Nav() {
           >
             Rewards
           </a>
+          <Link href="/" className="font-display text-3xl text-olive">
+            Good Days Cafe
+          </Link>
         </div>
 
         {/* Mobile — hamburger */}

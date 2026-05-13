@@ -62,7 +62,7 @@ export default function Home() {
           <h1 className="font-display text-6xl sm:text-7xl lg:text-8xl text-olive leading-none">
             Every Day is<br />a Good Day
           </h1>
-          <p className="font-body text-lg text-charcoal/70 max-w-md">
+          <p className="font-body text-lg text-charcoal max-w-md">
             A feel-good neighborhood cafe in the heart of Reno.
             Breakfast, lunch, coffee, and good vibes at 941 N Virginia St.
           </p>
@@ -91,12 +91,12 @@ export default function Home() {
             <h2 className="font-display text-4xl lg:text-5xl text-olive">
               Good food, good people, good days.
             </h2>
-            <p className="font-body text-base text-charcoal/70 leading-relaxed">
+            <p className="font-body text-base text-charcoal leading-relaxed">
               We opened Good Days Cafe because we believe a neighborhood spot should feel
               like home — a place where the coffee is always fresh, the food is made with
               care, and you leave feeling better than when you walked in.
             </p>
-            <p className="font-body text-base text-charcoal/70 leading-relaxed">
+            <p className="font-body text-base text-charcoal leading-relaxed">
               Come as you are. Stay as long as you like. We&apos;ll keep the good days going.
             </p>
             <Link
@@ -109,11 +109,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Menu teaser ── */}
-      <section className="py-20 px-6 bg-charcoal">
+      {/* ── Customer Favorites ── */}
+      <section className="py-20 px-6 bg-olive">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-end justify-between mb-10 gap-4">
-            <h2 className="font-display text-4xl lg:text-5xl text-cream">What we&apos;re making</h2>
+            <h2 className="font-display text-4xl lg:text-5xl text-cream">Customer Favorites</h2>
             <Link
               href="/menu"
               className="font-heading text-sm text-cream/60 hover:text-cream transition-colors underline underline-offset-4 shrink-0"
@@ -133,7 +133,7 @@ export default function Home() {
                     Food photo
                   </span>
                 </div>
-                <span className="font-heading text-xs uppercase tracking-widest text-olive">
+                <span className="font-heading text-xs uppercase tracking-widest text-cream/60">
                   {tag}
                 </span>
                 <h3 className="font-heading text-xl text-cream">{name}</h3>
@@ -171,7 +171,7 @@ export default function Home() {
                   </span>
                 </div>
                 <h3 className="font-heading text-lg text-charcoal">{title}</h3>
-                <p className="font-body text-sm text-charcoal/60 leading-relaxed">{description}</p>
+                <p className="font-body text-sm text-charcoal leading-relaxed">{description}</p>
               </div>
             ))}
           </div>
