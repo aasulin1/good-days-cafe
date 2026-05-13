@@ -251,17 +251,17 @@ function MenuItemRow({ item }: { item: MenuItem }) {
             ))}
           </div>
           {item.description && (
-            <p className="font-body text-sm text-charcoal/70">{item.description}</p>
+            <p className="font-body text-sm text-charcoal">{item.description}</p>
           )}
           {item.note && (
-            <p className="font-body text-xs text-charcoal/50 italic">{item.note}</p>
+            <p className="font-body text-xs text-charcoal italic">{item.note}</p>
           )}
         </div>
         {sized ? (
           <div className="flex gap-3 shrink-0 text-right">
             {Object.entries(item.price as SizePrice).map(([size, price]) => (
               <div key={size} className="flex flex-col items-center">
-                <span className="font-heading text-[10px] text-charcoal/40">{size}</span>
+                <span className="font-heading text-[10px] text-charcoal">{size}</span>
                 <span className="font-heading text-sm text-charcoal">{price}</span>
               </div>
             ))}
@@ -304,7 +304,7 @@ export default function MenuTabs() {
             <h3 className="font-display text-3xl text-olive mb-1">{sub.title}</h3>
           )}
           {sub.subtitle && (
-            <p className="font-body text-sm text-charcoal/60 mb-4">{sub.subtitle}</p>
+            <p className="font-body text-sm text-charcoal mb-4">{sub.subtitle}</p>
           )}
           <div>
             {sub.items.map((item) => (
@@ -313,7 +313,7 @@ export default function MenuTabs() {
           </div>
           {sub.addOns && (
             <div className="mt-6 pt-4 border-t border-charcoal/10">
-              <span className="font-heading text-xs text-charcoal/40 mr-2">Add Ons</span>
+              <span className="font-heading text-xs text-olive mr-2">Add Ons</span>
               <span className="font-body text-sm text-charcoal">{sub.addOns}</span>
             </div>
           )}
@@ -322,13 +322,13 @@ export default function MenuTabs() {
 
       {/* Dietary key */}
       <div className="mt-16 pt-6 border-t border-charcoal/10 flex flex-wrap items-center gap-4">
-        <span className="font-heading text-xs text-charcoal/40">Dietary</span>
+        <span className="font-heading text-xs text-olive">Dietary</span>
         {(Object.keys(BADGE_STYLES) as Badge[]).map((b) => (
           <span key={b} className={`font-heading text-xs px-2 py-1 rounded ${BADGE_STYLES[b]}`}>
             {b} — {b === "GF" ? "Gluten Free" : b === "V" ? "Vegan" : "Vegetarian"}
           </span>
         ))}
-        <p className="font-body text-xs text-charcoal/50 w-full mt-1">
+        <p className="font-body text-xs text-charcoal w-full mt-1">
           Have dietary needs or allergies? Let our team know — we got you!
         </p>
       </div>
