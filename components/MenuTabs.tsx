@@ -262,12 +262,12 @@ function MenuItemRow({ item }: { item: MenuItem }) {
             {Object.entries(item.price as SizePrice).map(([size, price]) => (
               <div key={size} className="flex flex-col items-center">
                 <span className="font-heading text-[10px] text-charcoal">{size}</span>
-                <span className="font-heading text-sm text-charcoal">{price}</span>
+                <span className="font-heading text-base text-charcoal">{price}</span>
               </div>
             ))}
           </div>
         ) : (
-          <span className="font-heading text-base text-olive shrink-0">{item.price as string}</span>
+          <span className="font-heading text-base text-olive shrink-0 self-start">{item.price as string}</span>
         )}
       </div>
     </div>
@@ -304,19 +304,19 @@ export default function MenuTabs() {
             <h3 className="font-display text-3xl text-olive mb-1">{sub.title}</h3>
           )}
           {sub.subtitle && (
-            <p className="font-body text-sm text-charcoal mb-4">{sub.subtitle}</p>
+            <p className="font-body text-sm text-charcoal mb-2">{sub.subtitle}</p>
+          )}
+          {sub.addOns && (
+            <p className="font-body text-sm text-charcoal mb-4">
+              <span className="font-heading text-xs text-olive mr-2">Add Ons</span>
+              {sub.addOns}
+            </p>
           )}
           <div>
             {sub.items.map((item) => (
               <MenuItemRow key={item.name} item={item} />
             ))}
           </div>
-          {sub.addOns && (
-            <div className="mt-6 pt-4 border-t border-charcoal/10">
-              <span className="font-heading text-xs text-olive mr-2">Add Ons</span>
-              <span className="font-body text-sm text-charcoal">{sub.addOns}</span>
-            </div>
-          )}
         </div>
       ))}
 
